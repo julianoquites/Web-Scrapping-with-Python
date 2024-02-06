@@ -1,6 +1,6 @@
 
-# Web scrapping example using Python
+# Web scrapping in Mercado Livre using Python
 
-## Used request, bs4, pandas and datetime libraries. Saved data in a JSON file.
+## Used the "todays promotion" page from mercadolivre.com.br. Used request, bs4, pandas and datetime libraries and saved the data in a JSON file.
 
 
