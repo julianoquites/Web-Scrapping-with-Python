@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 # URL do Mercado Livre
-url = 'https://www.mercadolivre.com.br/ofertas#c_id=/home/promotions-recommendations&c_uid=1baf6fec-4e6b-4f28-b7ce-ed69bd603ccb'
+url = 'https://www.mercadolivre.com.br/ofertas#c_id=/home/promotions-recommendations&c_uid=1a0069bb-5019-47a0-a68e-c088c7810367'
 
 # Fazendo a solicitação HTTP
 response = requests.get(url)
@@ -24,7 +24,7 @@ for name in soup.find_all('p', class_='promotion-item__title'):
     name = name.text.strip()
     product_names.append(name)
 
-for price in soup.find_all('span', class_='andes-money-amount andes-money-amount--cents-superscript'):
+for price in soup.find_all('div', class_='andes-money-amount-combo__main-container'):
     price = price.text.strip()
     product_prices.append(price)
 
